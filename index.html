@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./css/grid.css">
+   <link rel="stylesheet" href="./css/main.css">
+   <link rel="stylesheet" href="./css/styles.css">
+   <link rel="stylesheet" href="./css/fonts.css">
+   <title>Детская игровая студия</title>
+</head>
+<body>
+   <header>
+      <div class="popup">
+         <div class="tile-border popup__container">
+           <div class="thanks-popup">
+             <div class="thanks-content">
+               <h2>Спасибо!</h2>
+               <img class=""
+                  width="251"
+                  height="216"
+                  src="images/mimi.png"
+                  alt=""
+               />
+               <p>Форма отправлена</p>
+             </div>
+           </div>
+           <div class="popup__content">
+             <h2 class="popup__text">Заказать звонок</h2>
+             <form action="mail.php" enctype="multipart/form-data" class="popup__form" method="POST">
+               <input type="hidden" name="form_subject" value="Новое сообщение" />
+               <input class="form-input popup__name" type="text" data-validate-field="name" name="Имя" placeholder="*Имя" />
+               <input class="form-input popup__tel" type="tel" data-validate-field="tel" name="Телефон" placeholder="*Телефон" />
+               <span class="pb-16">*Обязательные поля для заполнения</span>
+               <button type="submit" class="packages-block--tile-btn packages-block--tile-btn-color-2 bg-color--orange btn-close">Отправить</button>
+             </form>
+           </div>
+         </div>
+         <div class="drop-menu-wrapper drop--in"></div>
+       </div>
+      <div class="header header-padding">
+         <div class="container">
+            <div class="grid-container">
+               <div class="grid-col grid-col--6 grid-col--md5">
+                  <div class="flexbox align-items-center">
+                     <img class="header--img-logo"
+                        width="132"
+                        height="90" 
+                        src="images/logo.svg"
+                        alt="mimi loft"
+                     />
+                     <div class="grid--hide-xm">
+                        <ul class="flexbox flex-wrap">
+                           <li class="header-list"><a href="#rent">Аренда</a></li>
+                           <li class="header-list"><a href="#packages">Пакеты</a></li>
+                           <li class="header-list"><a href="#services">Услуги</a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="grid-col grid-col--6 grid-col--md7">
+                  <div class="flexbox align-items-center justify-content-end height-100">
+                     <div class="grid--hide-xm">
+                        <a class="text-color--black" target="_blank" rel="noopener" href="https://yandex.ru/maps/2/saint-petersburg/house/repishcheva_ulitsa_10k2/Z0kYdABnQUUBQFhqfXxzcH5ibA==/?ll=30.277807%2C60.021218&z=17">
+                           <div class="flexbox align-items-center header--location-wrapper mr-24">
+                              <div class="circle mr-12 flexbox align-items-center justify-content-center">
+                                 <img
+                                    width="24"
+                                    height="24" 
+                                    src="images/icons/Location_24x24.svg"
+                                 />
+                              </div>
+                              <span>ул. Репищева 10к2</span>
+                           </div>
+                        </a>
+                     </div>
+                     <a class="z-index-3 flexbox align-items-center xm mr-xm-32 mr-sm-20 text-color--black" href="tel:+7 931 377-00-90">
+                        <div class="circle mr-12 mr-sm-0 flexbox align-items-center justify-content-center">
+                           <img
+                              width="24"
+                              height="24" 
+                              src="images/icons/Phone_24x24.svg"
+                           />
+                        </div>
+                        <span class="grid--hide-sm">+7 931 377-00-90</span>
+                     </a>
+                     <div class="grid--hide grid--show-xm">
+                        <div class="flexbox align-items-center">
+                           <div class="menu-wrapper circle flexbox align-items-center justify-content-center">
+                              <div class="menu">
+                                 <div class="menu-btn">
+                                 </div>
+                               </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="drop-menu-wrapper drop--in"></div>
+            <div class="grid--hide grid--show-xm drop-menu">
+               <div class="grid-container height-100">
+                  <div class="pb-sm-40 drop-menu--items">
+                     <ul class="pb-sm-40 drop-menu--ul">
+                        <li class="drop-menu-list pb-20 pb-sm-28"><a class="drop-menu-link" href="#rent">Аренда</a></li>
+                        <li class="drop-menu-list pb-20 pb-sm-28"><a class="drop-menu-link" href="#packages">Пакеты</a></li>
+                        <li class="drop-menu-list"><a class="drop-menu-link" href="#services">Услуги</a></li>
+                     </ul>
+                     <div>
+                        <a class="phone-hide-sm mb-20 flexbox align-items-center text-color--black" href="tel:+7 931 377-00-90">
+                           <div class="circle mr-12 mr-sm-0 flexbox align-items-center justify-content-center">
+                              <img
+                                 width="24"
+                                 height="24" 
+                                 src="images/icons/Phone_24x24.svg"
+                              />
+                           </div>
+                           <span>+7 931 377-00-90</span>
+                        </a>
+                        <a class="text-color--black" target="_blank" rel="noopener" href="https://yandex.ru/maps/2/saint-petersburg/house/repishcheva_ulitsa_10k2/Z0kYdABnQUUBQFhqfXxzcH5ibA==/?ll=30.277807%2C60.021218&z=17">
+                           <div class="flexbox align-items-center header--location-wrapper mr-24">
+                              <div class="circle mr-12 flexbox align-items-center justify-content-center">
+                                 <img
+                                    width="24"
+                                    height="24" 
+                                    src="images/icons/Location_24x24.svg"
+                                 />
+                              </div>
+                              <span>ул. Репищева 10к2</span>
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+   <section class="first-block-pt">
+      <div class="container height-100">
+         <div class="grid-container  grid-container--noGutter first-block">
+            <div class="grid-col grid-col--5 grid-col--xm6 grid-col--sm12">
+               <h1 class="h1 h1-pt pb-20 pb-xm-16">Детская игровая&#160;студия</h1>
+               <P class="header-descr pb-32 pb-sm-24"">
+                  Идеальное место для празднования дня рождения
+               </P>
+               <div class="pb-56 pb-sm-24">
+                  <button class="btn btn-width-100 bg-color--orange">
+                     <span class="relative btn-arrow">Записаться</span>
+                  </button>
+               </div>
+            </div>
+            <div class="grid-col grid-col--7 grid-col--xm6 grid-col--sm12 grid-col--end pb-0">
+               <img class="img-main"
+                  width="628"
+                  height="487"
+                  src="images/main.png"
+                  srcset="images/main-2x.png"
+               />
+            </div>
+         </div>
+      </div>
+   </section>
+   <section class="section bg-color--white pt-60 pt-xm-56 pt-sm-40 pb-60">
+      <div class="container">
+         <div class="grid-container">
+            <div class="grid-col grid-col--4 grid-col--md6 grid-col--sm12">
+               <div class="tile-border bg-color--gray advantages--padding flexbox align-items-flex-start height-100">
+                  <img class="mr-16"
+                     width="56"
+                     height="56"
+                     src="images/Icons/square_56x56.svg"
+                  />
+                  <div>
+                     <h5 class="h5 pt-16 pb-12">Более 100&#160;м²</h5>
+                     <p>
+                        2-х этажный деревянный дом, обеденная зона
+                     </p>
+                  </div>
+               </div>
+            </div>
+            <div class="grid-col grid-col--4 grid-col--md6 grid-col--sm12">
+               <div class="tile-border bg-color--gray advantages--padding flexbox align-items-flex-start height-100">
+                  <img class="mr-16"
+                     width="56"
+                     height="56"
+                     src="images/Icons/enjoy_56x56.svg"
+                  />
+                  <div>
+                     <h5 class="h5 pt-16 pb-12">Развлечения</h5>
+                     <p>
+                        Анимационные программы для любого возраста
+                     </p>
+                  </div>
+               </div>
+            </div>
+            <div class="grid-col grid-col--4 grid-col--md6 grid-col--sm12">
+               <div class="tile-border bg-color--gray advantages--padding flexbox align-items-flex-start height-100">
+                  <img class="mr-16"
+                     width="56"
+                     height="56"
+                     src="images/Icons/eco_56x56.svg"
+                  />
+                  <div>
+                     <h5 class="h5 pt-16 pb-12">ЭКО игрушки</h5>
+                     <p>
+                        Стильный дизайн и&#160;экологичность
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="grid-container">
+            <div class="grid-col grid-col--8 grid-col--sm12">
+               <h2 class="h2 pt-94 pt-xm-56 pt-sm-40 pb-32 pb-xm-24 pb-sm-16">Отметьте детский <br>День Рождения у&#160;нас</h2>
+            </div>
+         </div>
+         <div class="grid-container relative gallery--index-1">
+            <img class="gallery--img-mimi"
+               width="251"
+               height="216"
+               src="images/mimi.png"
+               srcset="images/mimi-2x.png"
+               alt=""
+            />
+            <div class="grid-col grid-col--4 grid-col--sm6">
+               <div class="grid-container">
+                  <div class="grid-col">
+                     <div class="tile-border gallery-tile-border">
+                        <img class=""
+                           width="380"
+                           height="240"
+                           src="images/1.png"
+                           srcset="images/1-2x.png"
+                        />
+                     </div>
+                  </div>
+                  <div class="grid-col">
+                     <div class="tile-border gallery-tile-border">
+                        <img class=""
+                           width="380"
+                           height="472"
+                           src="images/4.png"
+                           srcset="images/4-2x.png"
+                        />
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="grid-col grid-col--4 grid-col--sm6">
+               <div class="grid-container">
+                  <div class="grid-col">
+                     <div class="tile-border gallery-tile-border">
+                        <img class=""
+                           width="380"
+                           height="380"
+                           src="images/2.png"
+                           srcset="images/2-2x.png"
+                        />
+                     </div>
+                  </div>
+                  <div class="grid-col">
+                     <div class="tile-border gallery-tile-border">
+                        <img class=""
+                           width="380"
+                           height="332"
+                           src="images/3.png"
+                           srcset="images/3-2x.png"
+                        />
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="grid-col grid-col--4 grid-col--sm12">
+               <div class="grid-container">
+                  <div class="grid-col grid-col--sm7">
+                     <div class="tile-border gallery-tile-border">
+                        <img class=""
+                           width="380"
+                           height="472"
+                           src="images/5.png"
+                           srcset="images/5-2x.png"
+                        />
+                     </div>
+                  </div>
+                  <div class="grid-col grid-col--sm5">
+                     <div class="tile-border gallery-tile-border height-100">
+                        <img class="gallery--imd-6"
+                           width="380"
+                           height="240"
+                           src="images/6.png"
+                           srcset="images/6-2x.png"
+                        />
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section class="section bg-color--white rent-block--pt pb-60 negative-mt60">
+      <div class="container">
+         <div id="rent" class="anchor"></div>
+         <h2 class="h2  pb-32">Аренда</h2>
+         <div class="tile-border rent-block--tile-padding bg-color--light-yellow">
+            <div class="grid-container">
+               <div class="grid-col grid-col--6 grid-col--xm12 pb-32">
+                  <h4 class="h4 pb-28">Игровая студия</h4>
+                  <div class="relative list-circle list-circle--color-1 pb-28">
+                     <div class="flexbox justify-content-between align-items-end rent-block--price-flex rent-block--left-col-width">
+                        <div class="pb-sm-16">
+                           <h5 class="h5 pb-16">Будни</h5>
+                           <p class="price-text pb-12">до&#160;16:00</p>
+                           <div class="price-wrapper bg-color--dark-yellow">
+                              <p class="price-text text-color--black"><span class="price-text--bold">2 500 ₽</span> / час</p>
+                           </div>
+                        </div>
+                        <div>
+                           <p class="price-text pb-12">после 16:00</p>
+                           <div class="price-wrapper bg-color--dark-yellow">
+                              <p class="price-text text-color--black"><span class="price-text--bold">3 000 ₽</span> / час</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="relative list-circle list-circle--color-1">
+                     <h5 class="h5 pb-12">Выходные и&#160;праздники</h5>
+                     <div class="price-wrapper bg-color--dark-yellow">
+                        <p class="price-text text-color--black"><span class="price-text--bold">3 500 ₽</span> / час</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="grid-col grid-col--6 grid-col--xm12 pb-32">
+                  <div class="tile-border rent-block--small-tile-padding bg-color--yellow rent-block--small-tile-max-width">
+                     <h5 class="h5 pb-16">Что входит</h5>
+                     <ul>
+                        <li class="relative list-circle list-circle--color-2 pb-12">Универсальная фотозона месяца</li>
+                        <li class="relative list-circle list-circle--color-3 pb-12">Сервировка в подарок</li>
+                        <li class="relative list-circle list-circle--color-4">Xbox для родителей и старших детей</li>
+                     </ul>
+                  </div>
+                  <p class="pt-20 rent-block--small-tile-max-width">
+                     Если Вам необходимо время для оформления вашего праздника, то&#160;вы&#160;можете забронировать декораторское время по&#160;специальной цене&#160;&#8212; 1&#160;000&#160;&#8381; (30&#160;мин)
+                  </p>
+               </div>
+               <div class="grid-col grid-col--12">
+                  <button class="btn btn-width-100 bg-color--orange">
+                     <span>Забронировать</span>
+                  </button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section class="section bg-color--white pt-80 pt-xm-56 pt-sm-40 negative-mt60 pb-60">
+      <div class="container">
+         <div id="packages" class="anchor"></div>
+         <h2 class="h2 pb-32">Пакеты</h2>
+         <div class="scroll-wrapper">
+            <div class="grid-container scroll-container">
+               <div class="grid-col grid-col--4 grid-col--md6 grid-col--sm12 packages-col-width scroll-col flex-shrink-0">
+                  <div class="tile-border packages-block--tile-border-1 height-100 flexbox flex-column">
+                     <div class="tile-border packages-block--tile-padding bg-color--light-blue flex-grow-1">
+                        <div class="flexbox justify-content-between packages-price-column pb-18">
+                           <h4 class="h4 packages-pb-sm-12">Mini Люкс</h4>
+                           <div class="price-wrapper bg-color--blue">
+                              <p class="text-color--white price-text--bold">14&#160;500&#160;&#8381;</p>
+                           </div>
+                        </div>
+                        <p class="price-text text-color--black packages-sm-text">Время аренды&#160;&#8212; <span class="price-text--bold">2,5 часа</span></p>
+                     </div>
+                     <div class="packages-block--tile-list-padding">
+                        <ul class="pb-24">
+                           <li class="relative list-circle--big list-circle--color-5 text-color--black pb-12">Универсальная фотозона месяца</li>
+                           <li class="relative list-circle--big list-circle--color-5 text-color--black pb-12">Работа одного аниматора 1&#160;час (герой на&#160;выбор)</li>
+                           <li class="relative list-circle--big list-circle--color-5 text-color--black pb-12">Мини диско с&#160;мыльным пузырями (10&#160;минут)</li>
+                           <li class="relative list-circle--big list-circle--color-5 text-color--black pb-12">Музыкальное сопровождение</li>
+                           <li class="relative list-circle--big list-circle--color-5 text-color--black pb-12">Электронные пригласительные (по&#160;запросу)</li>
+                           <li class="relative list-circle--big list-circle--color-5 text-color--black pb-12">Посуда на&#160;25&#160;персон</li>
+                           <li class="relative list-circle--big-disabled list-circle--color-5 pb-12">Серебряное шоу с&#160;пушкой</li>
+                           <li class="relative list-circle--big-disabled list-circle--color-5 pb-12">Услуги фотографа (1&#160;час)</li>
+                           <li class="relative list-circle--big-disabled list-circle--color-5 ">Кейтеринг для детей (10&#160;персон)</li>
+                        </ul>
+                        <button class="packages-btn packages-block--tile-btn bg-color--white">
+                           <span>Забронировать</span>
+                        </button>
+                     </div>
+                  </div>
+               </div>
+               <div class="grid-col grid-col--4 grid-col--md6 grid-col--sm12 packages-col-width scroll-col flex-shrink-0">
+                  <div class="tile-border packages-block--tile-border-2 height-100 flexbox flex-column">
+                     <div class="tile-border packages-block--tile-padding bg-color--pink flex-grow-1">
+                        <div class="flexbox justify-content-between packages-price-column pb-18">
+                           <h4 class="h4 packages-pb-sm-12">Комфорт&#160;+</h4>
+                           <div class="price-wrapper bg-color--hot-pink">
+                              <p class="text-color--white price-text--bold">17&#160;800&#160;&#8381;</p>
+                           </div>
+                        </div>
+                        <p class="price-text text-color--black pb-8 packages-sm-text">Время аренды&#160;&#8212; <span class="price-text--bold">3 часа</span></p>
+                        <p>Четвертый час&#160;&#8212; 2&#160;000&#160;&#8381;</p>
+                     </div>
+                     <div class="packages-block--tile-list-padding">
+                        <ul class="pb-24">
+                           <li class="relative list-circle--big list-circle--color-5 text-color--black pb-12">Универсальная фотозона месяца</li>
+                           <li class="relative list-circle--big list-circle--color-5 text-color--black pb-12">Работа одного аниматора 1&#160;час (герой на&#160;выбор)</li>
+                           <li class="relative list-circle--big list-circle--color-5 text-color--black pb-12">Мини диско с&#160;мыльным пузырями (10&#160;минут)</li>
+                           <li class="relative list-circle--big list-circle--color-5 text-color--black pb-12">Музыкальное сопровождение</li>
+                           <li class="relative list-circle--big list-circle--color-5 text-color--black pb-12">Электронные пригласительные (по&#160;запросу)</li>
+                           <li class="relative list-circle--big list-circle--color-5 text-color--black pb-12">Посуда на&#160;25&#160;персон</li>
+                           <li class="relative list-circle--big list-circle--color-5 text-color--black pb-12">Серебряное шоу с&#160;пушкой</li>
+                           <li class="relative list-circle--big-disabled list-circle--color-5 pb-12">Услуги фотографа (1&#160;час)</li>
+                           <li class="relative list-circle--big-disabled list-circle--color-5 ">Кейтеринг для детей (10&#160;персон)</li>
+                        </ul>
+                        <button class="packages-btn packages-block--tile-btn packages-block--tile-btn-color-2 bg-color--orange">
+                           <span>Забронировать</span>
+                        </button>
+                     </div>
+                  </div>
+               </div>
+               <div class="grid-col grid-col--4 grid-col--md6 grid-col--sm12 packages-col-width scroll-col flex-shrink-0">
+                  <div class="tile-border packages-block--tile-border-3 height-100 flexbox flex-column">
+                     <div class="tile-border packages-block--tile-padding bg-color--salmon flex-grow-1">
+                        <div class="flexbox justify-content-between packages-price-column pb-18">
+                           <h4 class="h4 packages-pb-sm-12">Все включено</h4>
+                           <div class="price-wrapper bg-color--misty-rose">
+                              <p class="text-color--white price-text--bold">26&#160;500&#160;&#8381;</p>
+                           </div>
+                        </div>
+                        <p class="price-text text-color--black pb-8 packages-sm-text">Время аренды&#160;&#8212; <span class="price-text--bold">3 часа</span></p>
+                        <p>Четвертый час&#160;&#8212; 2&#160;000&#160;&#8381;</p>
+                     </div>
+                     <div class="packages-block--tile-list-padding">
+                        <ul class="pb-24">
+                           <li class="relative list-circle--big list-circle--color-5 text-color--black pb-12">Универсальная фотозона месяца</li>
+                           <li class="relative list-circle--big list-circle--color-5 text-color--black pb-12">Работа одного аниматора 1&#160;час (герой на&#160;выбор)</li>
+                           <li class="relative list-circle--big list-circle--color-5 text-color--black pb-12">Мини диско с&#160;мыльным пузырями (10&#160;минут)</li>
+                           <li class="relative list-circle--big list-circle--color-5 text-color--black pb-12">Музыкальное сопровождение</li>
+                           <li class="relative list-circle--big list-circle--color-5 text-color--black pb-12">Электронные пригласительные (по&#160;запросу)</li>
+                           <li class="relative list-circle--big list-circle--color-5 text-color--black pb-12">Посуда на&#160;25&#160;персон</li>
+                           <li class="relative list-circle--big list-circle--color-5 text-color--black pb-12">Серебряное шоу с&#160;пушкой</li>
+                           <li class="relative list-circle--big list-circle--color-5 text-color--black pb-12">Услуги фотографа (1&#160;час)</li>
+                           <li class="relative list-circle--big list-circle--color-5 text-color--black">Кейтеринг для детей (10&#160;персон)</li>
+                        </ul>
+                        <button class="packages-btn packages-block--tile-btn bg-color--white">
+                           <span>Забронировать</span>
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section class="section bg-color--white pt-80 pt-xm-56 pt-sm-40 negative-mt60 pb-140 pb-xm-104 pb-sm-88">
+      <div class="container">
+         <div class="grid-container mb-60 mb-xm-42 mb-sm-22">
+            <div class="grid-col">
+               <div id="services" class="anchor"></div>
+               <h2 class="h2 pb-32 pb-xm-24 pb-sm-18">Дополнительно</h2>
+               <div class="flexbox pb-16">
+                  <h4 class="h4 mr-16">Аниматоры</h4>
+                  <div class="price-wrapper bg-color--dark-yellow">
+                     <p class="text-color--black price-text--bold">от&#160;3&#160;500&#160;&#8381;</p>
+                  </div>
+               </div>
+               <p class="pb-16">
+                  Сделают ваш День Рождения красивым <br>и&#160;незабываемым
+               </p>
+               <div class="tile-border bg-color--dark-gray pt-20 pr-20 pb-20 pl-20">
+                  <img class="grid--hide-sm"
+                     width="1124"
+                     height="254"
+                     set="images/animators.png"
+                     srcset="images/animators-2x.png"
+                     alt=""
+                  />
+                  <img class="grid--hide grid--show-sm"
+                     width="1124"
+                     height="254"
+                     set="images/animators-375.png"
+                     srcset="images/animators-375-2x.png"
+                     alt=""
+                  />
+               </div>
+            </div>
+         </div>
+         <div class="grid-container mb-60 mb-xm-42 mb-sm-22">
+            <div class="grid-col grid-col--6 grid-col--sm12 pb-sm-20">
+               <div class="flexbox pb-16">
+                  <h4 class="h4 mr-16">Кейтеринг</h4>
+                  <div class="price-wrapper bg-color--dark-yellow">
+                     <p class="text-color--black price-text--bold">от&#160;2&#160;800&#160;&#8381;</p>
+                  </div>
+               </div>
+               <p class="pb-16">
+                  Помогут вам сделать <br>замечательный и&#160;вкусный стол
+               </p>
+               <div class="tile-border">
+                  <img class=""
+                     width="576"
+                     height="294"
+                     src="images/reytering.png"
+                     srcset="images/reytering-2x.png"
+                     alt=""
+                  />
+               </div>
+            </div>
+            <div class="grid-col grid-col--6 grid-col--sm12">
+               <div class="flexbox pb-16">
+                  <h4 class="h4 mr-16">Фотограф</h4>
+                  <div class="price-wrapper bg-color--dark-yellow">
+                     <p class="text-color--black price-text--bold">от&#160;3&#160;500&#160;&#8381;</p>
+                  </div>
+               </div>
+               <p class="pb-16">
+                  Создаст классную атмосферу <br>и&#160;запечатлит лучшие моменты
+               </p>
+               <div class="tile-border">
+                  <img class=""
+                     width="576"
+                     height="294"
+                     src="images/photographer.png"
+                     srcset="images/photographer-2x.png"
+                     alt=""
+                  />
+               </div>
+            </div>
+         </div>
+         <div class="flexbox pb-16">
+            <h4 class="h4 mr-16">Шоу-программа</h4>
+            <div class="price-wrapper bg-color--dark-yellow">
+               <p class="text-color--black price-text--bold">от&#160;5&#160;000&#160;&#8381;</p>
+            </div>
+         </div>
+         <div class="show_program-scroll-wrapper">
+            <div class="grid-container show_program-scroll-container">
+               <div class="grid-col grid-col--4 show_program-scroll-col flex-shrink-0">
+                  <div class="tile-border relative">
+                     <img class=""
+                        width="576"
+                        height="294"
+                        src="images/programma-1.png"
+                        srcset="images/programma-1-2x.png"
+                        alt=""
+                     />
+                     <div class="show-program-descr bg-color--white">
+                        <p class="">Серебрянная дискотека</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="grid-col grid-col--4 show_program-scroll-col flex-shrink-0">
+                  <div class="tile-border relative">
+                     <img class=""
+                        width="576"
+                        height="294"
+                        src="images/programma-2.png"
+                        srcset="images/programma-2-2x.png"
+                        alt=""
+                     />
+                     <div class="show-program-descr bg-color--white">
+                        <p class="">Мыльное шоу</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="grid-col grid-col--4 show_program-scroll-col flex-shrink-0">
+                  <div class="tile-border relative">
+                     <img class=""
+                        width="576"
+                        height="294"
+                        src="images/programma-3.png"
+                        srcset="images/programma-3-2x.png"
+                        alt=""
+                     />
+                     <div class="show-program-descr bg-color--white">
+                        <p class="">Азотное шоу с&#160;мороженым</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="grid-col grid-col--4 show_program-scroll-col flex-shrink-0">
+                  <div class="tile-border relative">
+                     <img class=""
+                        width="576"
+                        height="294"
+                        src="images/programma-4.png"
+                        srcset="images/programma-4-2x.png"
+                        alt=""
+                     />
+                     <div class="show-program-descr bg-color--white">
+                        <p class="">Beauty бар</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="grid-col grid-col--4 show_program-scroll-col flex-shrink-0">
+                  <div class="tile-border relative">
+                     <img class=""
+                        width="576"
+                        height="294"
+                        src="images/programma-5.png"
+                        srcset="images/programma-5-2x.png"
+                        alt=""
+                     />
+                     <div class="show-program-descr bg-color--white">
+                        <p class="">Шоу трансформеров</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="grid-col grid-col--4 show_program-scroll-col flex-shrink-0">
+                  <div class="tile-border relative">
+                     <img class=""
+                        width="576"
+                        height="294"
+                        src="images/programma-6.png"
+                        srcset="images/programma-6-2x.png"
+                        alt=""
+                     />
+                     <div class="show-program-descr bg-color--white">
+                        <p class="">Фокусы с&#160;животными</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section class="section bg-color--light-yellow pt-80 pt-xm-56 pt-sm-40 pb-140 negative-mt60">
+      <div class="container">
+         <div class="grid-container">
+            <div class="grid-col grid-col--6 grid-col--xm5 grid-col--sm12 map-order-sm1">
+               <div class="tile-border">
+                  <div id="map" class="map-width"></div>
+               </div>
+            </div>
+            <div class="grid-col grid-col--6 grid-col--xm7 grid-col--sm12 map-order-sm2 pb-sm-24">
+               <div class="pl-sm-0 pl-24">
+                  <h3 class="h3 pb-16">Не нашли <br>подходящий пакет?</h3>
+                  <p class="form-descr pb-24">Мы&#160;соберем программу по&#160;вашим пожеланиям</p>
+                  <form action="mail.php" class="form flexbox flex-column" enctype="multipart/form-data" method="POST">
+                     <input type="hidden" name="form_subject" value="Новое сообщение" />
+                     <div class="pb-12">
+                        <input class="form-input" data-validate-field="name" type="name" name="Имя" placeholder="Имя">
+                     </div>
+                     <div class="pb-20">
+                        <input class="form-input" data-validate-field="tel" type="tel" name="телефон" placeholder="Телефон">
+                     </div>
+                     <div class="pb-24">
+                        <label class="control control--checkbox flexbox align-items-baseline" for="checkbox">
+                           <input id="checkbox" data-validate-field="checkbox" class="checkbox" type="checkbox" >
+                           <span class="control__indicator"></span>
+                           <div class="form-agreements ml-14">
+                              Я&#160;соглашаюсь с&#160;условиями договора оферты и&#160;политики конфиденциальности
+                           </div>
+                        </label>
+                     </div>
+                     <button type="submit" class="form-btn btn-width-100 bg-color--orange">
+                        <span>Оставить заявку</span>
+                     </button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <footer class="section footer pt-80 negative-mt60">
+      <div class="container">
+         <div class="grid-container">
+            <div class="grid-col grid-col--6 grid-col--sm12 flexbox flex-column grid-container--space">
+               <div class="flexbox align-items-center ">
+                  <img class="footer--img-logo"
+                     width="132"
+                     height="90" 
+                     src="images/logo.svg"
+                     alt="mimi loft"
+                  />
+                  <div class="flex-grow-1 footer-logo-border">
+                     <p class="footer-text text-color--black pl-16">
+                        Праздники для вас <br>и&#160;ваших детей
+                     </p>
+                  </div>
+               </div>
+               <div class="grid--hide-sm">
+                  <div class="flexbox footer-politics">
+                     <p class="pb-md-16 pr-58">Политика конфиденциальности</p>
+                     <p>©&#160;2023&#160;МимиЛофт </p>
+                  </div>
+               </div>
+            </div>
+            <div class="grid-col grid-col--6 grid-col--sm12">
+               <div class="footer-contacts-wrapper">
+                  <div class="footer-contacts pb-40 pb-sm-32">
+                     <div class="flexbox align-items-center mr-24 mr-mb-0 pb-md-20 pb-sm-16">
+                        <div class="circle mr-12 flexbox align-items-center justify-content-center">
+                           <img
+                              width="24"
+                              height="24" 
+                              src="images/icons/Phone_24x24.svg"
+                           />
+                        </div>
+                        <a class="text-color--black" href="tel:+7 931 377-00-90">+7 931 377-00-90</a>
+                     </div>
+                     <div class="flexbox align-items-center">
+                        <div class="circle mr-12 flexbox align-items-center justify-content-center">
+                           <img
+                              width="24"
+                              height="24" 
+                              src="images/icons/Location_24x24.svg"
+                           />
+                        </div>
+                        <a class="text-color--black" target="_blank" rel="noopener" href="https://yandex.ru/maps/2/saint-petersburg/house/repishcheva_ulitsa_10k2/Z0kYdABnQUUBQFhqfXxzcH5ibA==/?ll=30.277807%2C60.021218&z=17">ул. Репищева 10к2</a>
+                     </div>
+                  </div>
+                  <div class="pb-sm-32">
+                     <p class="footer-socials-title text-color--black pb-20">Напишите нам</p>
+                     <div class="flexbox">
+                        <div class="circle mr-12 flexbox align-items-center justify-content-center">
+                           <img
+                              width="24"
+                              height="24" 
+                              src="images/icons/Telegram_24x24.svg"
+                           />
+                        </div><div class="circle mr-12 flexbox align-items-center justify-content-center">
+                           <img
+                              width="24"
+                              height="24" 
+                              src="images/icons/WhatsApp_24x24.svg"
+                           />
+                        </div><div class="circle flexbox align-items-center justify-content-center">
+                           <img
+                              width="24"
+                              height="24" 
+                              src="images/icons/Viber_24x24.svg"
+                           />
+                        </div>
+                     </div>
+                  </div>
+                  <div class="grid--hide grid--show-sm">
+                     <div class="flexbox footer-politics">
+                        <p class="pb-md-16 pr-58">Политика конфиденциальности</p>
+                        <p>©&#160;2023&#160;МимиЛофт </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <script src="js/jquery-3.6.3.min.js"></script>
+   <script src="js/inputmask.min.js"></script>
+   <script src="js/just-validate.min.js"></script>
+   <script src="js/script.js"></script>
+   <script src="js/scroll.js"></script>
+   <script src="js/burger.js"></script>
+   <script src="https://api-maps.yandex.ru/2.1/?&lang=ru_RU" type="text/javascript"></script>
+   <script>
+      ymaps.ready(init);
+      function init(){
+         // Создание карты.
+         var myMap = new ymaps.Map("map", {
+               // Координаты центра карты.
+               // Порядок по умолчанию: «широта, долгота».
+               // Чтобы не определять координаты центра карты вручную,
+               // воспользуйтесь инструментом Определение координат.
+               center: [60.021218, 30.277806],
+               // Уровень масштабирования. Допустимые значения:
+               // от 0 (весь мир) до 19.
+               zoom: 16,
+               controls: []
+               
+         },
+         {
+            suppressMapOpenBlock: true
+         });
+         var myPlacemark = new ymaps.Placemark([60.021218, 30.277806]);
+         myMap.geoObjects.add(myPlacemark);
+      }
+   </script>
+</body>
+</html>
